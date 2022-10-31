@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de producto</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/productDetail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        
+</head>
+<body>
+    <header>
+       <form action="">
+        <label for="">Nombre</label>
+        <input type="text" value="<%= product.name %>">
+        <label for="">Precio</label>
+        <input type="text" value="<%= product.price %>">
+        <label for="">Descuento</label>
+        <input type="text" value="<%= product.discount %>">
+        
+       </form>
+           
+      </header>
+    <main>
+        <article>
+            <div class="container-CenterImage">
+                <a href="#"><img src="" alt=""></a>
+            </div>
+            <div class="container-bottomImages">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="description-article">
+                <h2><%= product.name %> </h2>
+                <p><%= product.description %> </p>
+                <p><%= product.image %> </p>
+                <p><%= product.price %></p>
+                
+                <div class="productForm">
+                        
+                        <div class="container">
+                            <div class="button">
+                                <button id="decrement" onclick="stepper(this)"> - </button>
+                            </div>                            
+                                <input type="number" min="0" max="100" step="1" value="0" id="my-input" readonly>
+                            
+                            <div class="button">                                 
+                                <button id="increment" onclick="stepper(this)"> + </button>
+                            </div>
+                        </div>
+
+                        <button type="button">Añadir al carrito</button>
+                </div>
+                
+
+            </div>
+        </article>
+    </main>
+    
+</body>
+</html>
