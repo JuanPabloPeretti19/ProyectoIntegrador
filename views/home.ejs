@@ -10,14 +10,15 @@
    <!-- seccion ultima vista -->
       <% products.forEach(products=> { %> 
         <article>
-          <a href="/detail/<%= product.id%>"></a>
-        <img src="<%= product.image %> " alt="bolsas" class="imagenes" />
+          <a href="/detail/<%= productos.id%>"></a>
+        <img src="<%= productos.imagen %> " alt="productos" class="imagenes" />
 
 <div class="productos">
   <div class="articulos">
     <div class="titulares">
-         <p class="name"><%= product.name %> </p>
-         <p class="price"><%= product.price%> </p>
+         <p class="name"><%= productos.nombre %> </p>
+         <p class="description"><%= productos.descripcion%> </p>
+         <p class="price"><%= productos.precio%> </p>
         </div>
         </div>
       </div>

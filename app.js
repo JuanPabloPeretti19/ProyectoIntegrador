@@ -2,10 +2,12 @@ const { application } = require("express");
 const express = require("express");
 const app = express();
 const path = require("path");
+
+//Rutas creadas
 const mainRoutes= require('./src/routes/mainRoutes')
 const productRoutes= require('./src/routes/productRoutes')
 const registerRoutes= require('./src/routes/registerRoutes')
-const loginRoutes= require('./src/routes/logintRoutes')
+const loginRoutes= require('./src/routes/loginRoutes')
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
